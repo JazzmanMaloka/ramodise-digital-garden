@@ -10,7 +10,7 @@ export function Header() {
           </div>
         </div>
         <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-3 opacity-0 animate-fade-in-up animation-delay-100">
-          Ramodise's <span className="text-gradient">Homelab</span>
+          Jazzman's <span className="text-gradient">Homelab</span>
         </h1>
         <p className="text-lg text-muted-foreground opacity-0 animate-fade-in-up animation-delay-200">
           Self-hosted services, automation, and infrastructure.

@@ -1,31 +1,47 @@
-import { Server, Container, Shield, Cloud, Bug, Monitor, Workflow, Network, MonitorSmartphone, HardDrive } from "lucide-react";
+import piholeLogo from "@/assets/logos/pihole.png";
+import nextcloudLogo from "@/assets/logos/nextcloud.png";
+import dockerLogo from "@/assets/logos/docker.png";
+import casaosLogo from "@/assets/logos/casaos.ico";
+import adguardLogo from "@/assets/logos/adguard.ico";
+import pangolinLogo from "@/assets/logos/pangolin.ico";
+import wazuhLogo from "@/assets/logos/wazuh.png";
+import zabbixLogo from "@/assets/logos/zabbix.ico";
+import rustdeskLogo from "@/assets/logos/rustdesk.png";
+import n8nLogo from "@/assets/logos/n8n.ico";
+import opnsenseLogo from "@/assets/logos/opnsense.ico";
+import windowsLogo from "@/assets/logos/windows.png";
+import tacticalrmmLogo from "@/assets/logos/tacticalrmm.ico";
 
 const services = [
-  { name: "Pi-Hole CT", icon: Shield, type: "CT" },
-  { name: "NextCloud CT", icon: Cloud, type: "CT" },
-  { name: "Docker CT", icon: Container, type: "CT" },
-  { name: "CasaOS CT", icon: HardDrive, type: "CT" },
-  { name: "Adguard CT", icon: Shield, type: "CT" },
-  { name: "Pangolin CT", icon: Network, type: "CT" },
-  { name: "Wazuh CT", icon: Bug, type: "CT" },
-  { name: "Zabbix CT", icon: Monitor, type: "CT" },
-  { name: "RustDesk CT", icon: MonitorSmartphone, type: "CT" },
-  { name: "n8n CT", icon: Workflow, type: "CT" },
-  { name: "OPNsense VM", icon: Network, type: "VM" },
-  { name: "Windows 10 VM", icon: Server, type: "VM" },
-  { name: "Zabbix VM", icon: Monitor, type: "VM" },
-  { name: "TacticalRMM VM", icon: Server, type: "VM" },
+  { name: "Pi-Hole", logo: piholeLogo, type: "CT" },
+  { name: "NextCloud", logo: nextcloudLogo, type: "CT" },
+  { name: "Docker", logo: dockerLogo, type: "CT" },
+  { name: "CasaOS", logo: casaosLogo, type: "CT" },
+  { name: "Adguard", logo: adguardLogo, type: "CT" },
+  { name: "Pangolin", logo: pangolinLogo, type: "CT" },
+  { name: "Wazuh", logo: wazuhLogo, type: "CT" },
+  { name: "Zabbix", logo: zabbixLogo, type: "CT" },
+  { name: "RustDesk", logo: rustdeskLogo, type: "CT" },
+  { name: "n8n", logo: n8nLogo, type: "CT" },
+  { name: "OPNsense", logo: opnsenseLogo, type: "VM" },
+  { name: "Windows 10", logo: windowsLogo, type: "VM" },
+  { name: "Zabbix", logo: zabbixLogo, type: "VM" },
+  { name: "TacticalRMM", logo: tacticalrmmLogo, type: "VM" },
 ];
 
 export function ServicesList() {
   return (
     <ul className="space-y-1">
-      {services.map((service) => (
+      {services.map((service, index) => (
         <li
-          key={service.name}
+          key={`${service.name}-${service.type}-${index}`}
           className="flex items-center gap-3 py-3 border-b border-border last:border-0 group transition-colors hover:bg-secondary/30 -mx-2 px-2 rounded"
         >
-          <service.icon className="w-4 h-4 text-primary/70 group-hover:text-primary transition-colors" />
+          <img 
+            src={service.logo} 
+            alt={`${service.name} logo`} 
+            className="w-5 h-5 object-contain"
+          />
           <span className="text-foreground/90 group-hover:text-foreground transition-colors flex-1">
             {service.name}
           </span>

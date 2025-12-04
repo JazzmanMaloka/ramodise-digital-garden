@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+    <title>Amidaware Inc.</title>
+</head>
+
+<body>
+    <div style="text-align: center;"><br>
+        <table style="text-align: left; width: 80%; margin-left: auto; margin-right: auto;" border="0" cellpadding="2"
+            cellspacing="2">
+            <tbody>
+                <tr>
+                    <td style="vertical-align: top; text-align: center;"><br><img alt="logo" src="images/amidaware.jpg"><br>
+                        <a href="https://github.com/amidaware/tacticalrmm">GitHub</a><br>
+                        <a href="https://docs.tacticalrmm.com/">Documentation</a><br>
+                        <a href="https://discord.gg/upGTkWp">Discord</a><br>
+                        <a href="https://support.amidaware.com/">Commercial Support</a><br>
+                        <a href="https://license.tacticalrmm.com/">License</a><br>
+                        <a href="https://docs.tacticalrmm.com/sponsor/#sponsor-with-stripe-or-paypal">Fulfillment Policy</a><br>
+                        <a href="/privacy_policy.html">Privacy Policy</a><br>
+                        <br>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <br>
+    </div>
+</body>
+
+</html>
